@@ -1,0 +1,13 @@
+[Unit]
+Description=Process Monitor Service
+After=network.target
+
+[Service]
+ExecStart=/srv/venv/process-monitoring/bin/python3 /usr/local/bin/process_monitor.py
+Restart=always
+User=root
+Group=root
+WorkingDirectory=/usr/local/bin
+
+[Install]
+WantedBy=multi-user.target
