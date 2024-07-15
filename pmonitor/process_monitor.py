@@ -12,7 +12,7 @@ from datetime import datetime
 logging.basicConfig(filename='pmonitor.log', level=logging.ERROR, format='%(asctime)s %(levelname)s:%(message)s')
 
 config = configparser.ConfigParser()
-config.read('etc/pmonitor/pmonitor.conf')
+config.read('/etc/pmonitor/pmonitor.conf')
 
 prefix = config['Settings']['prefix']
 poll_interval = int(config['Settings']['poll_interval'])
